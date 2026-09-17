@@ -1,0 +1,97 @@
+/* Tagessau — geteiltes Stylesheet (Artikelseiten + Basiskomponenten).
+   Zentrale Datei; ersetzt die frueher je Artikel duplizierten Inline-Styles.
+   Superset aller frueheren Artikel-Varianten (inkl. .figure, .article .img, Zum-Gruebeln-Theme). */
+:root{--accent:#20284A;--accent-dark:#05112A;--accent-tint:#eaecf3;--headline:#20284A;--ink:#1c1c1c;--muted:#7a7a7a;--line:#e2e2e2;--bg:#ffffff;--grubeln:#5b6bd0;--grubeln-tint:#eef0fb;--durchschaut:#12897a;--durchschaut-tint:#e6f4f1;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.5;font-size:16px;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px;}
+.topbar{background:#20284A;color:#fff;}
+.topbar .wrap{display:flex;align-items:center;gap:16px;height:54px;}
+.logo{display:flex;align-items:flex-end;font-weight:800;font-size:24px;letter-spacing:-.5px;color:#fff;}
+.logo .target{align-self:center;width:34px;height:22px;margin:0 5px;display:inline-block;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24'><circle cx='20' cy='12' r='2.6' fill='%23e6a83a'/><path d='M14 7 A 8 8 0 0 0 14 17' fill='none' stroke='%23e6a83a' stroke-width='1.7' stroke-linecap='round'/><path d='M9 4 A 12 12 0 0 0 9 20' fill='none' stroke='%23e6a83a' stroke-width='1.7' stroke-linecap='round'/><path d='M26 7 A 8 8 0 0 1 26 17' fill='none' stroke='%23e6a83a' stroke-width='1.7' stroke-linecap='round'/><path d='M31 4 A 12 12 0 0 1 31 20' fill='none' stroke='%23e6a83a' stroke-width='1.7' stroke-linecap='round'/></svg>") center/contain no-repeat;}
+.logo .target::after{content:none;}
+.logo .tld{font-weight:400;opacity:.85;font-size:18px;margin-left:2px;}
+.weather{flex:1;text-align:center;font-size:15px;font-weight:600;opacity:.97;}
+.weather .caret{opacity:.8;margin-right:4px;}
+.badge{background:#fff;color:var(--accent-dark);font-weight:800;font-size:12px;letter-spacing:.5px;padding:4px 9px;border-radius:3px;text-transform:uppercase;margin-left:auto;}
+.subbar{background:#05112A;color:#fff;}
+.subbar .wrap{padding:6px 18px;font-size:12.5px;font-weight:600;letter-spacing:.2px;line-height:1.35;}
+.article{padding:24px 0 10px;max-width:760px;}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:14px;}
+.breadcrumb a{color:var(--accent-dark);font-weight:600;}
+.article .kicker{color:var(--accent-dark);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.article h1{font-size:32px;line-height:1.15;margin:0 0 8px;}
+.article .subheadline{font-size:19px;line-height:1.4;font-weight:600;color:#4f4f4f;margin:0 0 10px;}
+.article .img{width:100%;height:312px;border-radius:4px;margin:14px 0 6px;background:linear-gradient(135deg,#05112A,#20284A);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:12px;letter-spacing:1px;text-transform:uppercase;}
+.article .credit{font-size:12px;color:var(--muted);margin:0 0 16px;}
+.article .body p{margin:0 0 14px;font-size:17px;}
+.article .body p:first-child{font-style:italic;font-size:19px;line-height:1.5;font-weight:500;color:#333;}
+.article .body h2{font-size:20px;line-height:1.3;margin:28px 0 10px;color:var(--headline);scroll-margin-top:16px;}
+.figure{margin:14px 0 6px;}
+.figure img,.figure video{display:block;width:100%;height:auto;border-radius:4px;}
+.figure.side{float:right;width:42%;max-width:340px;margin:6px 0 10px 22px;}
+.figure .credit{font-size:12px;color:var(--muted);margin:6px 0 0;}
+.article-tool-link{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:13px;margin:8px 0 18px;padding:12px 14px;background:#05112A;color:#fff;border-left:4px solid #c6102e;border-radius:4px;box-shadow:0 4px 14px rgba(5,17,42,.16);transition:transform .2s ease,box-shadow .2s ease,background .2s ease;}
+.article-tool-link:hover{background:#101d3a;transform:translateY(-1px);box-shadow:0 7px 18px rgba(5,17,42,.22);}
+.article-tool-link:focus-visible{outline:3px solid #e6a83a;outline-offset:3px;}
+.article-tool-mark{display:inline-block;padding:3px 7px;border:2px solid #e53b50;color:#fff;font-size:10px;font-weight:900;letter-spacing:1px;line-height:1.2;text-transform:uppercase;transform:rotate(-1.5deg);}
+.article-tool-copy{min-width:0;line-height:1.25;}
+.article-tool-copy strong{display:block;font-size:17px;}
+.article-tool-copy small{display:block;margin-top:2px;color:#cbd1df;font-size:12px;font-weight:600;}
+.article-tool-cta{font-size:13px;font-weight:900;color:#f0bd58;white-space:nowrap;}
+.figure-ph{display:flex;align-items:center;justify-content:center;min-height:200px;background:linear-gradient(135deg,#05112A,#20284A);border-radius:4px;color:rgba(255,255,255,.7);font-size:12px;letter-spacing:1px;text-transform:uppercase;text-align:center;padding:10px;}
+.redaktion{clear:both;background:var(--accent-tint);border-left:4px solid var(--accent);padding:13px 16px;margin-top:16px;font-size:15px;color:#2a2a2a;}
+.redaktion .rl{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent-dark);font-weight:800;margin-bottom:4px;}
+.source{font-size:12px;color:var(--muted);margin:14px 0 0;}
+.source a{color:var(--accent-dark);font-weight:600;}
+.backlink{display:inline-block;margin:22px 0 0;color:var(--accent-dark);font-weight:700;}
+footer{background:#f4f4f4;border-top:4px solid var(--accent);margin-top:30px;}
+footer .wrap{padding:22px 18px 30px;font-size:13px;color:var(--muted);}
+.disclaimer{background:#fff;border:1px dashed var(--line);border-radius:4px;padding:14px 16px;margin-bottom:14px;line-height:1.5;color:#333;}
+footer strong{color:var(--ink);}
+/* Zum-Gruebeln-Theme — nur auf Seiten mit <body class="grubeln"> */
+.grubeln .article .kicker{color:var(--grubeln);}
+.grubeln .article .body h2{color:var(--grubeln);}
+.durchschaut .article .kicker{color:var(--durchschaut);}
+.durchschaut .article .body h2{color:var(--durchschaut);}
+.durchschaut .redaktion{background:var(--durchschaut-tint);border-left-color:var(--durchschaut);}
+.durchschaut .redaktion .rl{color:var(--durchschaut);}
+.grubeln .redaktion{background:var(--grubeln-tint);border-left-color:var(--grubeln);}
+.grubeln .redaktion .rl{color:var(--grubeln);}
+@media(max-width:680px){.figure.side{float:none;width:100%;max-width:none;margin:14px 0 6px;}.weather{display:none;}}
+@media(max-width:520px){.article-tool-link{grid-template-columns:1fr;gap:5px;padding:13px 14px;}.article-tool-mark{justify-self:start;margin-bottom:2px;}.article-tool-cta{margin-top:3px;}}
+
+.article .lead{width:100%;height:auto;display:block;border-radius:8px;margin:2px 0 22px}
+
+/* Interne Links im Artikeltext sichtbar machen (13.07.2026) */
+.article .body a,.redaktion a{color:var(--accent);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;}
+.article .body a:hover,.redaktion a:hover{color:var(--accent-dark);text-decoration-thickness:2px;}
+.article .body a[href^="http"]:not([href*="tagessau.com"]),.redaktion a[href^="http"]:not([href*="tagessau.com"]){color:#53677c;font-size:inherit;font-weight:400;text-decoration-color:rgba(83,103,124,.55);text-decoration-thickness:1px;text-underline-offset:2px;}
+.article .body a[href^="http"]:not([href*="tagessau.com"]):hover,.redaktion a[href^="http"]:not([href*="tagessau.com"]):hover{color:#40566f;text-decoration-color:#40566f;text-decoration-thickness:1px;}
+
+.dateline{font-size:13px;color:#8a93b2;margin:2px 0 14px;letter-spacing:.02em;}
+
+/* Pressekit-Satire: responsive Tabellen und hochkantiges Video. */
+.kit-article .body p:first-child{font-style:normal;font-size:17px;line-height:1.5;font-weight:400;color:var(--ink);}
+.translation-table-wrap{width:100%;overflow-x:auto;margin:0 0 24px;border:1px solid var(--line);border-radius:4px;-webkit-overflow-scrolling:touch;}
+.translation-table{width:100%;min-width:620px;border-collapse:collapse;background:#fff;color:#1c1c1c;font-size:15px;line-height:1.45;}
+.translation-table th,.translation-table td{padding:13px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+.translation-table th{background:#05112A;color:#fff;font-size:12px;letter-spacing:.45px;text-transform:uppercase;}
+.translation-table th:first-child,.translation-table td:first-child{width:34%;font-weight:750;}
+.translation-table tbody tr:last-child td{border-bottom:0;}
+.translation-table tbody tr:nth-child(even){background:#f6f7fa;}
+.article-video{display:flex;justify-content:center;margin:10px 0 12px;}
+.article-video video{display:block;width:min(100%,430px);height:auto;max-height:80vh;background:#050505;border-radius:7px;box-shadow:0 8px 24px rgba(5,17,42,.2);}
+.tiktok-link{text-align:center;font-size:14px!important;}
+@media(max-width:680px){
+  .translation-table-wrap{overflow:visible;border:0;border-radius:0;}
+  .translation-table{display:block;min-width:0;background:transparent;}
+  .translation-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;}
+  .translation-table tbody{display:grid;gap:12px;}
+  .translation-table tr{display:block;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:#fff;}
+  .translation-table th,.translation-table td{display:block;width:100%!important;border:0;padding:12px 14px;}
+  .translation-table td:first-child{background:#05112A;color:#fff;font-size:14px;line-height:1.35;}
+  .translation-table td+td{border-top:1px solid var(--line);}
+  .translation-table td+td::before{content:"Empfohlene Formulierung";display:block;margin-bottom:5px;color:#697184;font-size:10px;font-weight:800;letter-spacing:.45px;text-transform:uppercase;}
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Der Betroffenheits-Phrasendrescher: Hebel ziehen und sehen, welche Politiker-Floskel nach dem naechsten Anschlag faellt. Alle Zitate belegt, mit Name, Anlass und Quelle.">
+<link rel="canonical" href="https://tagessau.com/phrasendrescher.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tagessau">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Der Betroffenheits-Phrasendrescher">
+<meta property="og:description" content="Hebel ziehen. Dieselben Floskeln nach jedem Anschlag, egal welcher Taeter. Alle Zitate belegt.">
+<meta property="og:url" content="https://tagessau.com/phrasendrescher.html">
+<meta property="og:image" content="https://tagessau.com/images/phrasendrescher-og2.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Der Betroffenheits-Phrasendrescher">
+<meta name="twitter:description" content="Hebel ziehen. Dieselben Floskeln nach jedem Anschlag, egal welcher Taeter. Alle Zitate belegt.">
+<meta name="twitter:image" content="https://tagessau.com/images/phrasendrescher-og2.jpg">
+<title>Der Betroffenheits-Phrasendrescher — Tagessau</title>
+
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;color:#f3f5fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;background:#05070c url("images/slotbg.jpg") center/cover fixed no-repeat;}
+  body::before{content:"";position:fixed;inset:0;background:rgba(5,9,18,.55);z-index:0;}
+  a{color:inherit;}
+  .top,.wrap,footer{position:relative;z-index:1;}
+  .top{max-width:520px;margin:0 auto;padding:18px 18px 0;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-weight:800;font-size:18px;color:#fff;text-decoration:none;}
+  .logo .t{display:inline-block;width:12px;height:12px;border:2px solid #6f8bd6;border-radius:50%;position:relative;margin:0 2px;vertical-align:middle;}
+  .logo .t::after{content:"";position:absolute;inset:3px;background:#6f8bd6;border-radius:50%;}
+  .back{font-size:12px;color:#cfd8ee;text-decoration:none;}
+  .wrap{max-width:520px;margin:0 auto;padding:14px 18px 40px;}
+  h1{font-size:29px;line-height:1.1;margin:12px 0 6px;color:#fff;}
+  .sub{color:#cdd6ee;font-size:15px;margin:0 0 18px;line-height:1.5;}
+  #hook,#cliptag,#closer,#stamp{display:none;}
+
+  .cabinet{background:#14161c;border:4px solid #e7b04a;border-radius:18px;padding:16px 16px 18px;box-shadow:0 0 0 2px #05112A inset,0 14px 40px rgba(0,0,0,.5);}
+  .marquee{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:13px;}
+  .marquee .name{font-size:16px;font-weight:800;letter-spacing:1px;color:#e7b04a;text-transform:uppercase;}
+  .lite{width:10px;height:10px;border-radius:50%;background:#ff5a5a;display:inline-block;}
+  .deck{display:flex;gap:10px;align-items:stretch;}
+  .reels{flex:1;background:#05070c;border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:7px;}
+  .reel{background:#f5f3ec;border-radius:6px;padding:9px 11px;display:flex;align-items:center;overflow:hidden;}
+  #r0{min-height:44px;} #r1{min-height:82px;} #r2{min-height:44px;}
+  .reel span.tx{font-weight:800;color:#111;line-height:1.2;}
+  #r0 .tx,#r2 .tx{font-size:14px;}
+  #r1 .tx{font-size:16px;}
+  #dot{width:11px;height:11px;border-radius:2px;background:#888;margin-right:9px;flex:none;}
+  .lever{width:54px;flex:none;border:none;border-radius:10px;background:#3a3f4b;cursor:pointer;display:flex;flex-direction:column;align-items:center;padding-top:8px;}
+  #knob{width:28px;height:28px;border-radius:50%;background:#ff5a5a;display:block;transition:transform .25s cubic-bezier(.4,1.4,.5,1);}
+  .stem{width:6px;height:74px;background:#8a8f9c;display:block;margin-top:3px;border-radius:3px;}
+  .verdict{margin-top:12px;min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  #src{font-size:12px;color:#c9d3ec;}
+  #stampi{opacity:0;transform:rotate(-6deg) scale(.6);transition:transform .18s,opacity .18s;color:#ff5a5a;border:3px solid #ff5a5a;border-radius:8px;padding:3px 10px;font-size:15px;font-weight:800;text-transform:uppercase;white-space:nowrap;}
+  #count{font-size:13px;color:#e7b04a;margin-top:8px;line-height:1.45;}
+  .actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+  .sb{flex:1;min-width:112px;text-align:center;padding:11px 8px;border:1px solid #2b3c66;border-radius:10px;background:rgba(12,28,61,.6);color:#cfd8ee;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;}
+  .sb.primary{background:#e7b04a;color:#1a1204;border-color:#e7b04a;}
+  .phrase-share{flex:1 0 100%;display:flex;align-items:center;gap:8px;margin-top:8px;}
+  .phrase-share strong{margin-right:4px;font-size:12px;white-space:nowrap;}
+  .phrase-share-icon{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid #66728b;border-radius:50%;background:#fff;color:#081238;text-decoration:none;cursor:pointer;}
+  .phrase-share-icon svg{width:20px;height:20px;fill:currentColor;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;}
+  .phrase-share-icon:hover{color:#fff;background:#2f6fe4;border-color:#2f6fe4;}
+  .phrase-share-icon span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  #phraseShareStatus{flex:1 0 100%;font-size:12px;color:#c9d3ec;}
+  #phraseShareStatus:empty{display:none;}
+  .note{font-size:12px;color:#aeb9d6;margin-top:16px;line-height:1.5;}
+  footer{max-width:520px;margin:0 auto;padding:22px 18px 40px;font-size:12px;color:#9fabcb;line-height:1.6;}
+
+  body.clip .top,body.clip .sub,body.clip h1,body.clip .actions,body.clip .note,body.clip footer,body.clip #count{display:none;}
+  body.clip .wrap{padding-top:26px;}
+  body.clip #hook{display:block;font-size:26px;font-weight:800;color:#fff;line-height:1.22;margin:4px 0 18px;text-shadow:0 2px 12px rgba(0,0,0,.6);}
+  body.clip #r0 .tx,body.clip #r2 .tx{font-size:17px;}
+  body.clip #r1 .tx{font-size:19px;}
+  body.clip #r0{min-height:50px;} body.clip #r1{min-height:104px;} body.clip #r2{min-height:50px;}
+  body.clip #src{font-size:14px;}
+  body.clip #stampi{font-size:17px;}
+  body.clip #cliptag{display:block;text-align:center;color:#e7b04a;font-weight:800;font-size:17px;margin-top:14px;}
+  body.clip #closer.show{display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:center;min-height:360px;text-align:center;}
+  body.clip #closer .cl-big{font-size:32px;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.6);}
+  body.clip #closer .cl-url{font-size:20px;font-weight:800;color:#e7b04a;}
+  @media(max-width:430px){h1{font-size:25px;}}
+</style>
+<link rel="stylesheet" href="tagessau-legacy.css?v=20260908">
+<link rel="stylesheet" href="tagessau-shell.css?v=20260917"><link rel="stylesheet" href="tagessau-specials.css?v=20260917"></head>
+<body class="tagessau-shell special-phrasendrescher" data-ts-layout="legacy"><header class="ts-header">
+  <a class="ts-brand" href="index.html" aria-label="Tagessau Startseite">
+    <img src="assets/tagessau-logo.jpeg" alt="">
+    <strong>Tages<span>sau</span></strong>
+  </a>
+  <nav class="ts-nav" aria-label="Hauptnavigation">
+    <a href="index.html#top">Top-Themen</a>
+    <a href="index.html#formate">Formate</a>
+    <a href="index.html#meldungen">Meldungen</a>
+    <a href="archiv.html">Archiv</a>
+    <a class="ts-support" href="unterstuetzen.html">Unterstützen</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <h1>Der Betroffenheits-Phrasen&shy;drescher</h1>
+  <p class="sub">Ein Anschlag — und dieselben Verantwortlichen, die seit Jahren nichts ändern, lassen dieselben Sätze fallen. Zieh den Hebel und sieh, welche Floskel als Nächstes einrastet. Jedes Zitat belegt: Name, Anlass, Quelle.</p>
+
+  <div id="hook">Rate, was der Politiker sagt. (Du weißt es längst.)</div>
+
+  <div class="cabinet" id="machine">
+    <div class="marquee"><span class="lite"></span><span class="name">Betroffenheits-Automat</span><span class="lite"></span></div>
+    <div class="deck">
+      <div class="reels">
+        <div class="reel" id="r0"><span id="dot"></span><span class="tx" id="r0t">Politiker</span></div>
+        <div class="reel" id="r1"><span class="tx" id="r1t">Floskel</span></div>
+        <div class="reel" id="r2"><span class="tx" id="r2t">Anlass</span></div>
+      </div>
+      <button class="lever" id="lever" aria-label="Hebel ziehen"><span id="knob"></span><span class="stem"></span></button>
+    </div>
+    <div class="verdict"><span id="src">Hebel ziehen &rarr;</span><span id="stampi">Schon gehört.</span></div>
+    <div id="count">&nbsp;</div>
+    <div class="actions">
+      <button class="sb primary" id="again">Nochmal ziehen</button>
+      <div class="phrase-share" aria-label="Ergebnis teilen">
+        <strong>Ergebnis teilen auf:</strong>
+        <a class="phrase-share-icon" id="wa" target="_blank" rel="noopener" aria-label="Auf WhatsApp teilen" title="Auf WhatsApp teilen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4.1A8 8 0 1 1 20 11.7Z" fill="none" stroke-width="1.9"/><path d="M8.2 7.8c.4 3.7 2.3 5.7 6 6.2l1.1-1.2 2 .9c-.2 1.2-1 2-2.2 2.2-4.8-.7-7.5-3.3-8.1-8.1.2-1.2 1-2 2.2-2.2l.9 2-1.9.2Z" stroke="none"/></svg><span>WhatsApp</span></a>
+        <a class="phrase-share-icon" id="tw" target="_blank" rel="noopener" aria-label="Auf X teilen" title="Auf X teilen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l14 16M19 4L5 20" fill="none" stroke-width="2.2"/></svg><span>X</span></a>
+        <a class="phrase-share-icon" id="fb" target="_blank" rel="noopener" aria-label="Auf Facebook teilen" title="Auf Facebook teilen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.8v8h3.4Z" stroke="none"/></svg><span>Facebook</span></a>
+        <a class="phrase-share-icon" id="mail" aria-label="Per E-Mail teilen" title="Per E-Mail teilen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v12H3zM3.5 7l8.5 7 8.5-7" fill="none" stroke-width="1.9"/></svg><span>E-Mail</span></a>
+        <button class="phrase-share-icon" id="cp" type="button" aria-label="Link kopieren" title="Link kopieren"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 14.5l5-5M7.8 16.2l-1.1 1.1a3.25 3.25 0 0 1-4.6-4.6l3-3a3.25 3.25 0 0 1 4.6 0M16.2 7.8l1.1-1.1a3.25 3.25 0 0 1 4.6 4.6l-3 3a3.25 3.25 0 0 1-4.6 0" fill="none" stroke-width="1.9"/></svg><span>Link kopieren</span></button>
+        <span id="phraseShareStatus" role="status"></span>
+      </div>
+    </div>
+    <p class="note">Alle Zitate sind belegt (Name, Anlass, Datum, Quelle). Die Walzen drehen frei, rasten aber immer auf eine echte, dokumentierte Kombination ein — kein erfundenes Zitat. Hanau ist bewusst dabei: die Floskel kommt bei jedem Täter.</p>
+    <div id="cliptag">tagessau.com/phrasendrescher</div>
+  </div>
+  <div id="closer"><span class="cl-big">Probier den Polit-Phrasendrescher JETZT aus!</span><span class="cl-url">tagessau.com/phrasendrescher</span></div>
+</div>
+
+
+<script>
+(function(){
+  var DB=[
+    {w:"Olaf Scholz (SPD)",f:"Meine Gedanken sind bei den Opfern und ihren Angehörigen.",e:"Magdeburg, Weihnachtsmarkt",d:"20.12.2024",q:"X @KanzlerScholz",t:"Gedanken bei den Opfern"},
+    {w:"Markus Söder (CSU)",f:"Unsere Gedanken sind bei den Opfern und ihren Angehörigen.",e:"CSD Berlin",d:"26.07.2026",q:"X @Markus_Soeder",t:"Gedanken bei den Opfern"},
+    {w:"Markus Söder (CSU)",f:"Wir fühlen mit allen Opfern und beten für die Verletzten.",e:"München, ver.di-Demo",d:"13.02.2025",q:"X @Markus_Soeder",t:"Gedanken bei den Opfern"},
+    {w:"Friedrich Merz (CDU)",f:"Das ist ein Angriff auf unsere Gesellschaft.",e:"CSD Berlin",d:"26.07.2026",q:"X @bundeskanzler",t:"Angriff auf unsere Gesellschaft / Freiheit"},
+    {w:"Lars Klingbeil (SPD)",f:"Ein friedlicher CSD ist Ziel einer brutalen Tat geworden.",e:"CSD Berlin",d:"26.07.2026",q:"NIUS-Screenshot",t:"Angriff auf unsere Gesellschaft / Freiheit"},
+    {w:"Markus Söder (CSU)",f:"Wir werden entschlossen handeln, um unsere Freiheit zu schützen.",e:"CSD Berlin",d:"26.07.2026",q:"X @Markus_Soeder",t:"Angriff auf unsere Gesellschaft / Freiheit"},
+    {w:"Markus Söder (CSU)",f:"Wir trauern um die Opfer einer feigen und niederträchtigen Tat.",e:"Aschaffenburg, Messerangriff",d:"22.01.2025",q:"t-online",t:"feige, furchtbare Tat"},
+    {w:"Markus Söder (CSU)",f:"Der feige Anschlag auf den CSD in Berlin ist eine furchtbare Tat.",e:"CSD Berlin",d:"26.07.2026",q:"X @Markus_Soeder",t:"feige, furchtbare Tat"},
+    {w:"Sven Schulze (CDU)",f:"Unsere Offenheit lassen wir uns von feigen Gewalttätern nicht nehmen.",e:"CSD Berlin",d:"26.07.2026",q:"Screenshot",t:"feige, furchtbare Tat"},
+    {w:"Friedrich Merz (CDU)",f:"Der Messerangriff erschüttert mich zutiefst.",e:"Aschaffenburg, Messerangriff",d:"22.01.2025",q:"Hersfelder Zeitung",t:"erschüttert / fassungslos"},
+    {w:"Olaf Scholz (SPD)",f:"Wir sind tief erschüttert von dem furchtbaren Anschlag.",e:"München, ver.di-Demo",d:"13.02.2025",q:"bundesregierung.de",t:"erschüttert / fassungslos"},
+    {w:"Markus Söder (CSU)",f:"Es macht fassungslos, dass friedlich feiernde Menschen angegriffen werden.",e:"CSD Berlin",d:"26.07.2026",q:"X @Markus_Soeder",t:"erschüttert / fassungslos"},
+    {w:"André Kuper (CDU)",f:"Wir lassen uns nicht spalten, wir lassen uns nicht gegeneinander aufbringen.",e:"Solingen, Messeranschlag",d:"August 2024",q:"dpa",t:"nicht spalten / Zusammenhalt"},
+    {w:"F.-W. Steinmeier",f:"Hass und Gewalt dürfen nicht das letzte Wort haben. Stehen wir zusammen.",e:"Magdeburg, Weihnachtsmarkt",d:"25.12.2024",q:"ZDF / evangelisch.de",t:"nicht spalten / Zusammenhalt"},
+    {w:"Katrin Göring-Eckardt (Grüne)",f:"Gerade in diesen schweren Stunden braucht es Zusammenhalt.",e:"CSD Berlin",d:"26.07.2026",q:"NIUS-Screenshot",t:"nicht spalten / Zusammenhalt"},
+    {w:"Sophie Koch (SPD)",f:"Sie werden keine Angst ernten, sondern mehr Zusammenhalt, mehr Vielfalt und mehr Sichtbarkeit.",e:"CSD Berlin",d:"26.07.2026",q:"Tagesspiegel",t:"nicht spalten / Zusammenhalt"},
+    {w:"Markus Söder (CSU)",f:"Wir werden uns dem Terror nicht beugen.",e:"CSD Berlin",d:"26.07.2026",q:"X @Markus_Soeder",t:"Terror / Härte des Rechtsstaats"},
+    {w:"Olaf Scholz (SPD)",f:"Das ist Terrorismus gegen uns alle.",e:"Solingen, Messeranschlag",d:"August 2024",q:"ZDF / Euronews",t:"Terror / Härte des Rechtsstaats"},
+    {w:"Olaf Scholz (SPD)",f:"Dieser Täter kann nicht auf Nachsicht hoffen. Er muss das Land verlassen.",e:"München, ver.di-Demo",d:"13.02.2025",q:"Reuters",t:"Terror / Härte des Rechtsstaats"},
+    {w:"Stephan Weh (GdP)",f:"Der Terror darf nie gewinnen.",e:"CSD Berlin",d:"26.07.2026",q:"Tagesspiegel",t:"Terror / Härte des Rechtsstaats"},
+    {w:"Angela Merkel (CDU)",f:"Rassismus ist ein Gift, Hass ist ein Gift.",e:"Hanau, rechtsextremer Anschlag",d:"20.02.2020",q:"hessenschau",t:"Hass ist das Gift"},
+    {w:"Alfonso Pantisano (SPD)",f:"Der gestrige Tag hätte ein Tag der Freude, der Sichtbarkeit und der Freiheit sein sollen.",e:"CSD Berlin",d:"26.07.2026",q:"Tagesspiegel",t:"Trotz-Formel: mehr Sichtbarkeit"}
+  ];
+  var byType={};DB.forEach(function(x){(byType[x.t]=byType[x.t]||[]).push(x);});
+  var snark=["Schon gehört.","Wie originell.","Copy und Paste.","Seit Jahren dasselbe."];
+  function sn(w){return w.replace(/\s*\(.*\)$/,'').trim().split(' ').pop();}
+  function party(w){ if(/CSU/.test(w))return'#0a3d91'; if(/SPD/.test(w))return'#e3000f'; if(/Grüne/.test(w))return'#46962b'; if(/CDU/.test(w))return'#111111'; return'#7a7a7a'; }
+  function rnd(a){return a[Math.floor(Math.random()*a.length)];}
+  var r0t=document.getElementById('r0t'),r1t=document.getElementById('r1t'),r2t=document.getElementById('r2t'),dot=document.getElementById('dot');
+  var src=document.getElementById('src'),stampi=document.getElementById('stampi'),count=document.getElementById('count');
+  var lever=document.getElementById('lever'),knob=document.getElementById('knob'),again=document.getElementById('again');
+  var reels=[document.getElementById('r0'),document.getElementById('r1'),document.getElementById('r2')];
+  var busy=false,round=0,last=null;
+  function shareTxt(x){return '„'+x.f+'“ — '+x.w+' ('+x.e.split(',')[0]+')';}
+  function updateShare(x){
+    var url='https://tagessau.com/phrasendrescher.html';
+    var text=shareTxt(x);
+    document.getElementById('wa').href='https://api.whatsapp.com/send?text='+encodeURIComponent(text+' · Der Betroffenheits-Phrasendrescher: '+url);
+    document.getElementById('tw').href='https://twitter.com/intent/tweet?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(url);
+    document.getElementById('fb').href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url);
+    document.getElementById('mail').href='mailto:?subject='+encodeURIComponent('Der Betroffenheits-Phrasendrescher')+'&body='+encodeURIComponent(text+' · '+url);
+  }
+  function spin(){
+    if(busy)return;busy=true;stampi.style.opacity=0;src.textContent='…';count.innerHTML='&nbsp;';
+    knob.style.transform='translateY(36px)';setTimeout(function(){knob.style.transform='translateY(0)';},260);
+    var chosen=rnd(DB);last=chosen;
+    var stops=[720,1080,1440];
+    reels.forEach(function(rl,i){
+      rl.style.filter='blur(.5px)';
+      var iv=setInterval(function(){var x=rnd(DB);
+        if(i===0){r0t.textContent=x.w;dot.style.background=party(x.w);}
+        if(i===1){r1t.textContent=x.f;}
+        if(i===2){r2t.textContent=x.e.split(',')[0];}
+      },60);
+      setTimeout(function(){
+        clearInterval(iv);rl.style.filter='none';
+        rl.animate([{transform:'translateY(-7px)'},{transform:'translateY(0)'}],{duration:170});
+        if(i===0){r0t.textContent=chosen.w;dot.style.background=party(chosen.w);}
+        if(i===1){r1t.textContent='„'+chosen.f+'“';}
+        if(i===2){r2t.textContent=chosen.e.split(',')[0];
+          src.textContent='belegt · '+chosen.d+' · '+chosen.q;
+          var grp=byType[chosen.t];
+          var others=grp.filter(function(g){return !(g.w===chosen.w && g.f===chosen.f);});
+          if(others.length){count.textContent='Dieselbe Floskel — auch von: '+others.map(function(g){return sn(g.w)+' ('+g.e.split(',')[0]+')';}).join(', ');}
+          else{count.textContent='Einzelfund in unserer Datenbank.';}
+          stampi.textContent=snark[round%snark.length];round++;
+          stampi.style.transform='rotate(-6deg) scale(1)';stampi.style.opacity=1;
+          updateShare(chosen);busy=false;
+        }
+      },stops[i]);
+    });
+  }
+  lever.addEventListener('click',spin);again.addEventListener('click',spin);
+  document.getElementById('cp').addEventListener('click',function(){
+    var status=document.getElementById('phraseShareStatus');
+    var url='https://tagessau.com/phrasendrescher.html';
+    var text=last?shareTxt(last)+' · '+url:url;
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){status.textContent='Ergebnis und Link kopiert!';setTimeout(function(){status.textContent='';},1800);});
+    }
+  });
+  var blink=true;setInterval(function(){document.querySelectorAll('.lite').forEach(function(l){l.style.opacity=blink?1:.25;});blink=!blink;},600);
+
+  if(/[?&]clip=1/.test(location.search)){
+    document.body.classList.add('clip');
+    var closer=document.getElementById('closer');
+    var cr=0,cmax=4;
+    var crun=function(){
+      spin();cr++;
+      if(cr<cmax){setTimeout(crun,4200);}
+      else{setTimeout(function(){var m=document.getElementById('machine');if(m)m.style.display='none';var h=document.getElementById('hook');if(h)h.style.display='none';if(closer)closer.classList.add('show');},3000);}
+    };
+    setTimeout(crun,900);
+  }
+})();
+</script>
+<footer class="ts-footer">
+  <div>
+    <a class="ts-brand" href="index.html">
+      <img src="assets/tagessau-logo.jpeg" alt="">
+      <strong>Tages<span>sau</span></strong>
+    </a>
+    <p>Politische Satire, fast so witzig wie Politiker. Aber gratis.</p>
+  </div>
+  <nav aria-label="Weitere Informationen">
+    <a href="ueber-tagessau.html">Über uns</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="feed.xml">Artikel-Feed (RSS)</a>
+  </nav>
+</footer></body>
+</html>

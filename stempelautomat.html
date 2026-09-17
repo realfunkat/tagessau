@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Der Ben-Stempelautomat: dokumentierte politische und mediale Etiketten, satirisch auf Ben Berndt übertragen — mit Originalwortlaut, Datum und Quelle.">
+<link rel="canonical" href="https://tagessau.com/stempelautomat.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tagessau">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Der Ben-Stempelautomat">
+<meta property="og:description" content="Welchen Stempel bekommt Ben Berndt als Nächstes? Knopf drücken, Etikett ansehen und den dokumentierten Originalwortlaut prüfen.">
+<meta property="og:url" content="https://tagessau.com/stempelautomat.html">
+<meta property="og:image" content="https://tagessau.com/images/stempelautomat-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Der Ben-Stempelautomat">
+<meta name="twitter:description" content="Knopf drücken. Ben stempeln. Originalwortlaut und Quelle prüfen.">
+<meta name="twitter:image" content="https://tagessau.com/images/stempelautomat-og.jpg">
+<link rel="icon" href="data:,">
+<title>Der Ben-Stempelautomat — Tagessau</title>
+
+<style>
+  :root{
+    --navy:#06101f;
+    --navy-2:#0c1a2e;
+    --paper:#eee6d5;
+    --paper-deep:#d8cdb7;
+    --ink:#181714;
+    --muted:#6f685c;
+    --red:#b20f2e;
+    --red-dark:#79091e;
+    --brass:#d5a84e;
+    --line:#8d836f;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--navy);scroll-behavior:smooth}
+  body{margin:0;color:#f5f0e7;background:
+    linear-gradient(rgba(6,16,31,.72),rgba(6,16,31,.88)),
+    url("images/slotbg.jpg") center/cover fixed no-repeat;
+    font-family:Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased}
+  button,a{font:inherit}
+  button{touch-action:manipulation}
+  a{color:inherit}
+  ::selection{background:var(--red);color:#fff}
+  .top{max-width:1120px;margin:0 auto;padding:18px 22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{font-family:"Arial Black",Impact,sans-serif;font-size:19px;font-weight:900;letter-spacing:-.6px;text-decoration:none}
+  .logo .target{display:inline-block;width:13px;height:13px;border:2px solid #6f8bd6;border-radius:50%;position:relative;margin:0 2px;vertical-align:-1px}
+  .logo .target:after{content:"";position:absolute;inset:3px;border-radius:50%;background:#6f8bd6}
+  .shell{max-width:1120px;margin:0 auto;padding:22px 22px 54px}
+  .intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:34px;align-items:end;margin:12px 0 22px}
+  .intro>*{min-width:0}
+  .eyebrow{margin:0 0 8px;color:var(--brass);font:800 12px/1.2 "American Typewriter","Courier New",monospace;letter-spacing:1.7px;text-transform:uppercase}
+  h1{max-width:700px;margin:0;font-family:"Arial Black",Impact,sans-serif;font-size:clamp(40px,7vw,82px);line-height:.9;letter-spacing:-2.5px;text-transform:uppercase;text-wrap:balance;overflow-wrap:normal}
+  .deck{margin:0 0 4px;color:#d8dfec;font-size:17px;line-height:1.5}
+  .machine{position:relative;border:3px solid var(--brass);background:#12151a;box-shadow:0 22px 70px rgba(0,0,0,.55),inset 0 0 0 1px #3b2f1b;overflow:hidden}
+  .machine:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background:repeating-linear-gradient(96deg,transparent 0 18px,rgba(255,255,255,.025) 19px 20px)}
+  .machine-head{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;border-bottom:2px solid var(--brass);background:linear-gradient(#272a30,#15171b)}
+  .machine-name{font:900 14px/1 "Arial Black",Impact,sans-serif;letter-spacing:1.8px;text-transform:uppercase;color:var(--brass)}
+  .counter{font:700 12px/1 "American Typewriter","Courier New",monospace;color:#c8c2b7}
+  .workbench{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);min-height:570px}
+  .portrait-bay{position:relative;min-height:570px;overflow:hidden;background:#20252c}
+  .portrait-bay:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,8,14,.4),transparent 42%,rgba(4,8,14,.16)),linear-gradient(0deg,rgba(4,8,14,.7),transparent 40%);pointer-events:none}
+  .portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% center;filter:saturate(.82) contrast(1.03)}
+  .nameplate{position:absolute;z-index:2;left:22px;bottom:20px;border-left:5px solid var(--brass);padding:7px 12px;background:rgba(6,16,31,.88);box-shadow:0 5px 18px rgba(0,0,0,.35)}
+  .nameplate strong{display:block;font:900 24px/1 "Arial Black",Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase}
+  .nameplate span{display:block;margin-top:4px;color:#d7dbea;font:700 11px/1.2 "American Typewriter","Courier New",monospace;letter-spacing:1px;text-transform:uppercase}
+  .stamp-hammer{position:absolute;z-index:5;left:55%;top:-165px;width:min(470px,62%);transform:translateX(-50%);pointer-events:none}
+  .stamp-handle{width:32%;height:110px;margin:0 auto;background:linear-gradient(90deg,#5a3825,#a56a3b 48%,#5b3520);border:4px solid #20140e;border-bottom:0;border-radius:55% 55% 10px 10px;box-shadow:inset 7px 0 8px rgba(255,255,255,.15)}
+  .stamp-block{height:56px;border:5px solid #18110d;background:linear-gradient(#5e493a,#31251d);box-shadow:0 12px 20px rgba(0,0,0,.45)}
+  .stamp-mark{position:absolute;z-index:6;left:55%;top:46%;width:min(520px,68%);transform:translate(-50%,-50%) rotate(-7deg) scale(1.18);opacity:0;color:#b50027;border:8px double #b50027;padding:15px 18px;background:rgba(245,234,218,.66);text-align:center;font:900 clamp(29px,4.4vw,60px)/.92 Impact,"Arial Black",sans-serif;letter-spacing:1px;text-transform:uppercase;text-shadow:0 1px 0 rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(121,9,30,.18);backdrop-filter:grayscale(.7) brightness(1.3) contrast(.72);-webkit-backdrop-filter:grayscale(.7) brightness(1.3) contrast(.72);pointer-events:none;overflow-wrap:normal;word-break:normal;-webkit-hyphens:auto;hyphens:auto}
+  .stamp-mark.is-long{font-size:clamp(23px,3.25vw,44px)}
+  .portrait-bay.is-stamping .stamp-hammer{animation:hammer 720ms cubic-bezier(.28,.92,.28,1)}
+  .portrait-bay.is-stamping .stamp-mark{animation:imprint 720ms ease-out forwards}
+  .control{position:relative;z-index:3;padding:30px 24px 24px;background:linear-gradient(135deg,#16191f,#0b0d11);border-left:2px solid #3c3429;display:flex;flex-direction:column;justify-content:center}
+  .control-label{margin:0 0 8px;color:#aaa397;font:800 11px/1.3 "American Typewriter","Courier New",monospace;letter-spacing:1.5px;text-transform:uppercase}
+  .control h2{margin:0 0 15px;font:900 31px/1 "Arial Black",Impact,sans-serif;text-transform:uppercase;letter-spacing:-.4px}
+  .control p{margin:0;color:#c8c3ba;font-size:15px;line-height:1.45}
+  .press-button{position:relative;display:block;width:190px;height:190px;margin:28px auto 17px;border:0;border-radius:50%;background:#3a0b12;box-shadow:0 13px 0 #17191d,0 17px 0 #07080a,0 21px 34px rgba(0,0,0,.65);cursor:pointer}
+  .press-button:before{content:"";position:absolute;inset:12px;border-radius:50%;background:radial-gradient(circle at 38% 30%,#f54b5e 0,#c31634 34%,#8c0a25 72%,#500615 100%);border:5px solid #67071b;box-shadow:inset 0 5px 9px rgba(255,255,255,.25),inset 0 -10px 15px rgba(0,0,0,.4)}
+  .press-button span{position:absolute;z-index:2;inset:0;display:flex;align-items:center;justify-content:center;padding:30px;color:#fff8ed;text-align:center;font:900 22px/.95 "Arial Black",Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase;text-shadow:0 2px 0 #650719}
+  .press-button:hover:before{filter:brightness(1.08)}
+  .press-button:active{transform:translateY(8px);box-shadow:0 5px 0 #17191d,0 9px 0 #07080a,0 13px 20px rgba(0,0,0,.65)}
+  .press-button:focus-visible,.source-link:focus-visible,.again:focus-visible,.sb-btn:focus-visible,.back:focus-visible,.sound-toggle:focus-visible{outline:3px solid #fff;outline-offset:4px}
+  .press-button[disabled]{cursor:wait;filter:grayscale(.35)}
+  .hint{text-align:center!important;color:#8f8a82!important;font:700 11px/1.4 "American Typewriter","Courier New",monospace!important;text-transform:uppercase;letter-spacing:.9px}
+  .sound-toggle{align-self:center;min-height:44px;margin:9px auto 0;border:1px solid #595e68;background:#171a20;color:#d6d0c5;padding:9px 13px;font:900 11px/1 "American Typewriter","Courier New",monospace;letter-spacing:1px;text-transform:uppercase;cursor:pointer}
+  .sound-toggle:hover{border-color:var(--brass);color:var(--brass)}
+  .sound-toggle[aria-pressed="true"]:before{content:"●";margin-right:7px;color:#e4324e}
+  .sound-toggle[aria-pressed="false"]:before{content:"○";margin-right:7px;color:#8f8a82}
+  .evidence{position:relative;margin-top:18px;padding:0 22px 24px;color:var(--ink);background:var(--paper);border-top:8px solid var(--red);box-shadow:0 18px 45px rgba(0,0,0,.3)}
+  .evidence:before{content:"QUELLENVERZEICHNIS";display:inline-block;transform:translateY(-1px);padding:8px 12px;background:var(--red);color:#fff;font:900 12px/1 "American Typewriter","Courier New",monospace;letter-spacing:1.4px}
+  .evidence-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:28px;padding-top:19px}
+  .evidence-grid>*{min-width:0}
+  .result-label{margin:0 0 7px;color:var(--red);font:900 11px/1 "American Typewriter","Courier New",monospace;letter-spacing:1.2px;text-transform:uppercase}
+  .result-title{margin:0;font:900 clamp(28px,3.4vw,42px)/.95 "Arial Black",Impact,sans-serif;text-transform:uppercase;letter-spacing:-.7px;overflow-wrap:anywhere;hyphens:auto}
+  .original{margin:0 0 10px;padding-left:17px;border-left:4px solid var(--red);font-size:19px;line-height:1.35;font-weight:700}
+  .source-meta{margin:0;color:#4f493f;font:700 13px/1.55 "American Typewriter","Courier New",monospace}
+  .source-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+  .source-link,.again{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--ink);padding:9px 13px;background:transparent;color:var(--ink);font:900 12px/1.1 "American Typewriter","Courier New",monospace;text-decoration:none;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
+  .source-link:hover,.again:hover{background:var(--ink);color:var(--paper)}
+  .result-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .again{border-color:var(--red);background:var(--red);color:#fff}
+  .again:hover{background:var(--red-dark);border-color:var(--red-dark)}
+  .sharebar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 18px;padding:12px 14px;border:1px solid rgba(213,168,78,.55);background:rgba(6,16,31,.72)}
+  .sb-label{color:var(--brass);font:900 11px/1 "American Typewriter","Courier New",monospace;letter-spacing:1px;text-transform:uppercase}
+  .sb-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #aeb6c5;border-radius:4px;padding:9px 12px;background:#f6f1e8;color:var(--navy);font:900 12px/1 "American Typewriter","Courier New",monospace;text-decoration:none;cursor:pointer}
+  .sb-btn:hover{border-color:var(--brass);background:var(--brass);color:var(--navy)}
+  .sb-native{border-color:var(--red);background:var(--red);color:#fff}
+  .sb-native:hover{border-color:#d82345;background:#d82345;color:#fff}
+  .disclaimer{margin:16px 0 0;padding:14px 16px;border:1px dashed #9c907a;background:#e3dac8;color:#433d34;font-size:13px;line-height:1.5}
+  .disclaimer strong{color:var(--red-dark)}
+  .credit{margin:9px 0 0;color:#aaa397;font:700 10px/1.4 "American Typewriter","Courier New",monospace;letter-spacing:.5px;text-transform:uppercase}
+  .bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;color:#aab2c1;font:700 12px/1.5 "American Typewriter","Courier New",monospace}
+  .back{text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:3px;color:var(--brass)}
+  @keyframes hammer{0%{top:-165px}35%{top:28%}48%{top:28%}100%{top:-165px}}
+  @keyframes imprint{0%,35%{opacity:0;transform:translate(-50%,-50%) rotate(-7deg) scale(1.2)}45%{opacity:1;transform:translate(-50%,-50%) rotate(-7deg) scale(.92)}62%,100%{opacity:.94;transform:translate(-50%,-50%) rotate(-7deg) scale(1)}}
+  @media(max-width:820px){
+    .intro{grid-template-columns:1fr;gap:15px}.deck{max-width:700px}.workbench{grid-template-columns:1fr}.portrait-bay{min-height:500px}.control{border-left:0;border-top:2px solid #3c3429;padding:24px}.press-button{width:160px;height:160px;margin:22px auto 16px}.press-button span{font-size:19px}.evidence-grid{grid-template-columns:1fr;gap:18px}
+  }
+  @media(max-width:500px){
+    .top,.shell{padding-left:14px;padding-right:14px}.top{padding-top:14px}.shell{padding-top:16px}.intro{margin-top:4px}h1{font-size:40px;letter-spacing:-1.3px}.deck{font-size:15px}.sharebar{padding:11px;gap:7px}.sb-label{flex:1 0 100%;margin-bottom:2px}.sb-btn{flex:1 1 auto}.machine-head{padding:10px 12px}.machine-name{font-size:12px}.portrait-bay{min-height:420px}.portrait{object-position:55% center}.stamp-mark{left:53%;top:48%;width:86%;border-width:6px;font-size:30px;padding:12px 9px}.stamp-mark.is-long{font-size:24px}.stamp-hammer{left:53%;width:78%}.nameplate{left:12px;bottom:12px}.nameplate strong{font-size:19px}.control{padding:10px 18px 22px}.press-button{order:1;margin:0 auto 23px}.control-label{order:2}.control h2{order:3;font-size:27px}.control>p:not(.control-label):not(.hint){order:4}.hint{order:5;margin-top:16px!important}.sound-toggle{order:6}.evidence{padding-left:15px;padding-right:15px}.result-title{font-size:30px}.original{font-size:17px}.result-actions>*{flex:1 1 100%}.bottom{align-items:flex-start;flex-direction:column}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.portrait-bay.is-stamping .stamp-hammer{animation:none;top:-165px}.portrait-bay.is-stamping .stamp-mark{animation:none;opacity:.94;transform:translate(-50%,-50%) rotate(-7deg) scale(1)}}
+</style>
+<link rel="stylesheet" href="tagessau-legacy.css?v=20260908">
+<link rel="stylesheet" href="tagessau-share.css?v=3"><link rel="stylesheet" href="tagessau-shell.css?v=20260917"><link rel="stylesheet" href="tagessau-specials.css?v=20260917"></head>
+<body class="tagessau-shell special-stempel" data-ts-layout="legacy"><header class="ts-header">
+  <a class="ts-brand" href="index.html" aria-label="Tagessau Startseite">
+    <img src="assets/tagessau-logo.jpeg" alt="">
+    <strong>Tages<span>sau</span></strong>
+  </a>
+  <nav class="ts-nav" aria-label="Hauptnavigation">
+    <a href="index.html#top">Top-Themen</a>
+    <a href="index.html#formate">Formate</a>
+    <a href="index.html#meldungen">Meldungen</a>
+    <a href="archiv.html">Archiv</a>
+    <a class="ts-support" href="unterstuetzen.html">Unterstützen</a>
+  </nav>
+</header>
+
+
+<main class="shell">
+  <section class="intro" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow">Interaktiv · mit Quellen</p>
+      <h1 id="page-title">Der Ben-<br>Stempel&shy;automat</h1>
+    </div>
+    <p class="deck">Welchen Stempel bekommt Ben Berndt als Nächstes? Knopf drücken. Etikett ansehen. Dann lesen, wer das Original wann über wen gesagt hat.</p>
+  </section>
+
+  <div class="sharebar ts-share" aria-label="Stempelautomat teilen">
+    <strong class="sb-label">Teilen auf:</strong>
+    <button type="button" class="sb-btn sb-native" id="nativeShare" data-native-share hidden>Teilen</button>
+    <a class="sb-btn" id="shareWhatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="sb-btn" id="shareX" target="_blank" rel="noopener noreferrer">X</a>
+    <a class="sb-btn" id="shareFacebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a class="sb-btn" id="shareEmail">E-Mail</a>
+    <button type="button" class="sb-btn" id="copyPageLink" data-copy-share>Link kopieren</button>
+    <a class="sb-btn sb-utility" id="storyHint" data-share-ignore>Hinweis zur Story</a>
+    <span role="status" data-share-status></span>
+  </div>
+
+  <section class="machine" aria-label="Ben-Stempelautomat">
+    <div class="machine-head">
+      <span class="machine-name">Etikettenpresse · Modell TS-23</span>
+      <span class="counter" id="counter">Bereit · 23 Stempel geladen</span>
+    </div>
+    <div class="workbench">
+      <div class="portrait-bay" id="portraitBay">
+        <img class="portrait" src="images/benjamin-berndt-betreibt-den.webp" alt="Porträt von Benjamin Berndt" loading="eager" decoding="async">
+        <div class="nameplate"><strong>Ben Berndt</strong><span>Podcaster · ungeskriptet</span></div>
+        <div class="stamp-hammer" aria-hidden="true"><div class="stamp-handle"></div><div class="stamp-block"></div></div>
+        <div class="stamp-mark" id="stampMark" aria-live="polite">Noch unstempelt</div>
+      </div>
+      <div class="control">
+        <p class="control-label">Presse ist geladen</p>
+        <h2>Welcher Stempel wird es?</h2>
+        <p>Ein Druck genügt. Die Etiketten stammen nicht aus unserer Fantasie — der Originalwortlaut steht nach dem Einschlag darunter.</p>
+        <button class="press-button" id="pressButton" type="button" aria-describedby="pressHint"><span>Stempel<br>den Ben</span></button>
+        <p class="hint" id="pressHint">Knopf drücken · Einschlag abwarten · Beleg lesen</p>
+        <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true">Stempelton: an</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="evidence" id="evidence" aria-live="polite" aria-labelledby="resultTitle">
+    <div class="evidence-grid">
+      <div>
+        <p class="result-label">Personalisierter Satire-Stempel</p>
+        <h2 class="result-title" id="resultTitle">Noch keiner</h2>
+        <div class="result-actions">
+          <button class="again" id="againButton" type="button" hidden>Noch einmal stempeln</button>
+        </div>
+      </div>
+      <div>
+        <p class="original" id="originalQuote">Drück oben auf „Stempel den Ben“. Danach erscheint hier der dokumentierte Originalwortlaut.</p>
+        <p class="source-meta" id="sourceMeta">Sprecher · Datum · ursprünglicher Adressat</p>
+        <div class="source-links" id="sourceLinks"></div>
+      </div>
+    </div>
+    <p class="disclaimer"><strong>Wichtig:</strong> Die personalisierten Stempel sind Satire. Das Quellenverzeichnis zeigt, wer die jeweilige Originalformulierung über wen äußerte. Es behauptet nicht, dass die verlinkte Quelle Ben Berndt so bezeichnet hat.</p>
+  </section>
+
+  <div class="bottom"><a class="back" href="index.html">← Zurück zu Tagessau</a><span>Nicht mit ARD, ZDF, Deutschlandradio oder dem ORF verbunden.</span></div>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var DB=[
+    {
+      stamp:"Der zweitgefährlichste Mann Deutschlands?",
+      original:"„Der gefährlichste Mann Deutschlands“",
+      who:"DER SPIEGEL",
+      date:"14. August 2026",
+      about:"Original über Ulrich Siegmund",
+      sources:[{label:"SPIEGEL-Titel",url:"https://www.spiegel.de/politik/ulrich-siegmund-und-die-afd-in-sachsen-anhalt-der-gefaehrlichste-mann-deutschlands-a-266e764d-1785-4f3a-85da-24d939148dc3"}]
+    },
+    {
+      stamp:"Giftiger Abschaum",
+      original:"„giftiger Abschaum“",
+      who:"Marco Wanderwitz (CDU)",
+      date:"11. November 2018; später bestätigt",
+      about:"Original über Alexander Gauland und die AfD",
+      sources:[{label:"Bundestag",url:"https://www.bundestag.de/presse/hib/kurzmeldungen-951486"},{label:"WELT-Interview",url:"https://www.welt.de/politik/deutschland/article205797893/Marco-Wanderwitz-CDU-Ich-muss-der-AfD-Demagogie-widersprechen.html"}]
+    },
+    {
+      stamp:"Gesindel",
+      original:"„dieses Gesindel“",
+      who:"Friedrich Merz (CDU)",
+      date:"13. Februar 2020",
+      about:"Im Zusammenhang mit dem Erstarken rechter Parteien und der AfD; Merz erklärte danach, keine gewählten Abgeordneten oder Wähler gemeint zu haben",
+      sources:[{label:"Süddeutsche Zeitung",url:"https://www.sueddeutsche.de/politik/merz-cdu-vorsitz-1.4797959"}]
+    },
+    {
+      stamp:"Nazi",
+      original:"„Nazis im Reichstag“ · „die Nazis“",
+      who:"Sigmar Gabriel (SPD) · Lars Klingbeil (SPD)",
+      date:"14. September 2017 · 9. Juni 2024",
+      about:"Originale über den bevorstehenden AfD-Einzug beziehungsweise AfD und Alice Weidel",
+      sources:[{label:"WELT",url:"https://www.welt.de/politik/deutschland/article168648221/Gabriel-lastet-Merkel-Mitschuld-am-Erfolg-der-AfD-an.html"},{label:"ntv",url:"https://www.n-tv.de/politik/Nazi-Streit-AfD-prueft-rechtliche-Schritte-gegen-den-SPD-Chef-Lars-Klingbeil-article25003143.html"}]
+    },
+    {
+      stamp:"Nazi und Faschist",
+      original:"„Nazis und Faschisten“",
+      who:"Katrin Göring-Eckardt (Grüne)",
+      date:"18. Oktober 2019",
+      about:"Original über „weite Teile“ der AfD",
+      sources:[{label:"Süddeutsche Zeitung / dpa",url:"https://www.sueddeutsche.de/politik/erfurt-zeitung-goering-eckardt-nennt-afd-nazis-und-faschisten-dpa.urn-newsml-dpa-com-20090101-191018-99-348731"}]
+    },
+    {
+      stamp:"Salonfähiger Nazi",
+      original:"„Nazis werden salonfähig“",
+      who:"Sönke Rix (SPD)",
+      date:"4. April 2019",
+      about:"Original zur Wahl einer AfD-Abgeordneten ins Bundestagspräsidium; Rix bekräftigte den Vergleich",
+      sources:[{label:"WELT",url:"https://www.welt.de/politik/deutschland/article191320353/Soenke-Rix-SPD-Die-AfD-kann-man-mit-Nazis-vergleichen.html"}]
+    },
+    {
+      stamp:"Einer von verdammt vielen Faschisten",
+      original:"„In der AfD sind verdammt viele Faschisten.“",
+      who:"Heidi Reichinnek (Die Linke)",
+      date:"15. Dezember 2022",
+      about:"Original in einer Bundestagsrede über die AfD",
+      sources:[{label:"Dokumentation Reichinnek",url:"https://heidi-reichinnek.de/project/linken-politikerin-stellt-afd-mit-gender-rede-bloss/"}]
+    },
+    {
+      stamp:"Der neue Nazi",
+      original:"„die neuen Nazis“",
+      who:"Janine Wissler und Martin Schirdewan (Die Linke)",
+      date:"26. Januar 2024",
+      about:"Original im unmittelbaren Zusammenhang mit AfD-Mitgliedern",
+      sources:[{label:"Die Linke",url:"https://www.die-linke.de/start/presse/detail/holocaust-gedenktag-afd-mitglieder-zeigen-mit-deportationsplaenen-ihre-traditionslinie/"}]
+    },
+    {
+      stamp:"Im Kern faschistisch",
+      original:"„im Kern faschistische Gruppierung“ · „Sammelbecken für völkische Nationalisten, Rassisten und Faschisten“",
+      who:"Janine Wissler (Die Linke)",
+      date:"28. Januar 2025",
+      about:"Original über die AfD",
+      sources:[{label:"Die Linke Hessen",url:"https://die-linke-hessen.de/asyl-wende-der-cdu-csu-mit-unterstuetzung-der-afd/"}]
+    },
+    {
+      stamp:"Faschist",
+      original:"„Faschisten der AfD“",
+      who:"Luke Hoß (Die Linke)",
+      date:"12. September 2025",
+      about:"Original im Deutschen Bundestag",
+      sources:[{label:"Plenarprotokoll 21/22 · S. 64",url:"https://dserver.bundestag.de/btp/21/21022.pdf"}]
+    },
+    {
+      stamp:"Faschist und Rassist",
+      original:"„Ihr seid Faschisten“ · „Ihr seid Rassisten“",
+      who:"Luigi Pantisano (Die Linke)",
+      date:"16. September 2025",
+      about:"Original gegen die AfD-Fraktion im Bundestag",
+      sources:[{label:"Plenarprotokoll 21/23 · S. 119",url:"https://dserver.bundestag.de/btp/21/21023.pdf"}]
+    },
+    {
+      stamp:"Verfassungsfeind",
+      original:"„Verfassungsfeinde“ · „Feinde unserer Demokratie“ · „Menschenfeinde“",
+      who:"Marco Wanderwitz (CDU)",
+      date:"30. Januar 2025",
+      about:"Original zu den AfD-Abgeordneten",
+      sources:[{label:"Deutscher Bundestag",url:"https://www.bundestag.de/dokumente/textarchiv/2025/kw05-de-afd-1042014"}]
+    },
+    {
+      stamp:"Menschenfeind",
+      original:"„Wer diese Partei wählt, wählt Menschenfeinde“",
+      who:"Detlef Seif (CDU)",
+      date:"5. Dezember 2024",
+      about:"Original ausdrücklich über AfD-Wähler",
+      sources:[{label:"Plenarprotokoll 20/203 · S. 72",url:"https://dserver.bundestag.de/btp/20/20203.pdf"}]
+    },
+    {
+      stamp:"Teil der braunen Soße",
+      original:"„Teil der braunen Soße“",
+      who:"Uli Grötsch (SPD)",
+      date:"10. September 2020",
+      about:"Original über Menschen, die sich beim gemeinsamen Marschieren mit AfD, Reichsbürgern und Rechtsextremisten nicht abgrenzten",
+      sources:[{label:"Plenarprotokoll 19/173 · S. 87",url:"https://dserver.bundestag.de/btp/19/19173.pdf"}]
+    },
+    {
+      stamp:"Empörter, Frustrierter, Antidemokrat",
+      original:"„Sammelbecken der Empörten, der Frustrierten, der Antidemokraten“",
+      who:"Werner Schulz (Grüne)",
+      date:"3. Februar 2016",
+      about:"Original über die AfD; Deutschlandfunk dokumentiert die Aussage des Interviewgastes",
+      sources:[{label:"Deutschlandfunk",url:"https://www.deutschlandfunk.de/afd-vorstoss-zur-grenzsicherung-mit-waffen-afd-ist-100.html"}]
+    },
+    {
+      stamp:"Offener Faschist",
+      original:"„Partei mit offenen Faschisten im Bundestag“",
+      who:"Maximilian Schulz (Linksjugend)",
+      date:"20. September 2021",
+      about:"Original über die AfD",
+      sources:[{label:"Watson",url:"https://politik.watson.de/politik/interview/973639851-linken-chefin-janine-wissler-verfassungsschutz-hat-neonazis-geschuetzt"}]
+    },
+    {
+      stamp:"Völkischer Faschist",
+      original:"„Weil Höcke nun mal ein völkischer Faschist ist.“",
+      who:"ZDF · Die Anstalt",
+      date:"30. Januar 2026",
+      about:"Original über Björn Höcke",
+      sources:[{label:"ZDF-Faktencheck · S. 7",url:"https://www.zdf.de/assets/faktencheck-vom-30-januar-2026-100~original?cb=1769816460054"}]
+    },
+    {
+      stamp:"Durchmarschierender Faschist",
+      original:"„Durchmarsch der Faschisten“",
+      who:"taz · redaktioneller Kommentar",
+      date:"31. Mai 2024",
+      about:"Original über AfD-Kommunalwahlerfolge",
+      sources:[{label:"taz",url:"https://taz.de/Nach-den-Kommunalwahlen-in-Thueringen/!6011474/"}]
+    },
+    {
+      stamp:"Umstrittener Podcaster",
+      original:"„umstrittener Podcaster“",
+      who:"dpa / FOCUS",
+      date:"6. Juli 2026",
+      about:"Original direkt über Ben Berndt",
+      sources:[{label:"FOCUS",url:"https://www.focus.de/politik/deutschland/umstrittener-podcaster-ben-berndt-fordert-jobgarantie-fuer-afd-nahe-journalisten_32e572cb-133e-473a-8357-8442f8960f56.html"}]
+    },
+    {
+      stamp:"Unkritischer Fragensteller",
+      original:"Berndt habe Höcke „durch weitgehend unkritische Fragen eine Plattform geboten“",
+      who:"Helge Lindh (SPD), dokumentiert vom Deutschlandfunk",
+      date:"4. Mai 2026",
+      about:"Original direkt über Ben Berndts Höcke-Gespräch",
+      sources:[{label:"Deutschlandfunk",url:"https://www.deutschlandfunk.de/gipfelpunkt-der-entpolitisierung-von-rechtsextremismus-debatte-ueber-vierstuendiges-podcast-gespraec-100.html"}]
+    },
+    {
+      stamp:"PR-Show-Macher",
+      original:"„eine Art PR-Show für Björn Höcke“",
+      who:"Lars Castellucci (SPD), dokumentiert vom Deutschlandfunk",
+      date:"4. Mai 2026",
+      about:"Original direkt über Ben Berndts Höcke-Gespräch",
+      sources:[{label:"Deutschlandfunk",url:"https://www.deutschlandfunk.de/gipfelpunkt-der-entpolitisierung-von-rechtsextremismus-debatte-ueber-vierstuendiges-podcast-gespraec-100.html"}]
+    },
+    {
+      stamp:"Propaganda-Podcaster",
+      original:"Ohne Einordnung werde aus einem Podcast „schnell eine Propaganda-Sendung“",
+      who:"Johannes Kölbl, dokumentiert vom Deutschlandfunk",
+      date:"4. Mai 2026",
+      about:"Original im Zusammenhang mit Ben Berndts Höcke-Gespräch",
+      sources:[{label:"Deutschlandfunk",url:"https://www.deutschlandfunk.de/gipfelpunkt-der-entpolitisierung-von-rechtsextremismus-debatte-ueber-vierstuendiges-podcast-gespraec-100.html"}]
+    },
+    {
+      stamp:"Podcaster ohne Einordnung",
+      original:"„ohne kritisch nachzufragen oder einzuordnen“",
+      who:"Tagesspiegel",
+      date:"1. Juli 2026",
+      about:"Original direkt über Ben Berndts Höcke-Gespräch",
+      sources:[{label:"Tagesspiegel",url:"https://www.tagesspiegel.de/gesellschaft/medien/nach-kontroversem-gastauftritt-von-hocke-medienanstalt-fordert-von-podcaster-berndt-nachtragliche-korrektur--der-wehrt-sich-juristisch-15781364.html"}]
+    }
+  ];
+
+  var bay=document.getElementById("portraitBay");
+  var press=document.getElementById("pressButton");
+  var again=document.getElementById("againButton");
+  var mark=document.getElementById("stampMark");
+  var result=document.getElementById("resultTitle");
+  var quote=document.getElementById("originalQuote");
+  var meta=document.getElementById("sourceMeta");
+  var links=document.getElementById("sourceLinks");
+  var counter=document.getElementById("counter");
+  var evidence=document.getElementById("evidence");
+  var soundToggle=document.getElementById("soundToggle");
+  var used=[];
+  var first=true;
+  var busy=false;
+  var soundOn=true;
+  var audioContext=null;
+  var pageShareUrl="https://tagessau.com/stempelautomat.html";
+  var pageShareTitle="Der Ben-Stempelautomat";
+  var encode=encodeURIComponent;
+  document.getElementById("shareWhatsapp").href="https://api.whatsapp.com/send?text="+encode(pageShareTitle+" — "+pageShareUrl);
+  document.getElementById("shareX").href="https://twitter.com/intent/tweet?text="+encode(pageShareTitle)+"&url="+encode(pageShareUrl);
+  document.getElementById("shareFacebook").href="https://www.facebook.com/sharer/sharer.php?u="+encode(pageShareUrl);
+  document.getElementById("shareEmail").href="mailto:?subject="+encode(pageShareTitle)+"&body="+encode(pageShareUrl);
+  document.getElementById("storyHint").href="mailto:ezyfriend00@gmail.com?subject="+encode("Hinweis zu: "+pageShareTitle)+"&body="+encode("Seite: "+pageShareUrl+"\n\nMein Hinweis: ");
+  function primeAudio(){
+    if(!soundOn)return null;
+    if(!audioContext){
+      var AudioContext=window.AudioContext||window.webkitAudioContext;
+      if(!AudioContext){
+        soundOn=false;
+        soundToggle.hidden=true;
+        return null;
+      }
+      audioContext=new AudioContext();
+    }
+    if(audioContext.state==="suspended"){audioContext.resume();}
+    return audioContext;
+  }
+  function playStampSound(){
+    var ctx=primeAudio();
+    if(!ctx)return;
+    var now=ctx.currentTime;
+    var master=ctx.createGain();
+    master.gain.setValueAtTime(.58,now);
+    master.connect(ctx.destination);
+
+    var thud=ctx.createOscillator();
+    var thudGain=ctx.createGain();
+    thud.type="triangle";
+    thud.frequency.setValueAtTime(135,now);
+    thud.frequency.exponentialRampToValueAtTime(52,now+.105);
+    thudGain.gain.setValueAtTime(.55,now);
+    thudGain.gain.exponentialRampToValueAtTime(.001,now+.13);
+    thud.connect(thudGain).connect(master);
+    thud.start(now);thud.stop(now+.14);
+
+    var length=Math.floor(ctx.sampleRate*.12);
+    var buffer=ctx.createBuffer(1,length,ctx.sampleRate);
+    var data=buffer.getChannelData(0);
+    for(var i=0;i<length;i++){
+      var decay=1-(i/length);
+      data[i]=(Math.random()*2-1)*decay*decay;
+    }
+    var slap=ctx.createBufferSource();
+    var slapFilter=ctx.createBiquadFilter();
+    var slapGain=ctx.createGain();
+    slap.buffer=buffer;
+    slapFilter.type="bandpass";
+    slapFilter.frequency.setValueAtTime(720,now);
+    slapFilter.Q.setValueAtTime(.7,now);
+    slapGain.gain.setValueAtTime(.42,now);
+    slapGain.gain.exponentialRampToValueAtTime(.001,now+.12);
+    slap.connect(slapFilter).connect(slapGain).connect(master);
+    slap.start(now);slap.stop(now+.13);
+
+    var click=ctx.createOscillator();
+    var clickGain=ctx.createGain();
+    click.type="square";
+    click.frequency.setValueAtTime(460,now);
+    click.frequency.exponentialRampToValueAtTime(180,now+.025);
+    clickGain.gain.setValueAtTime(.1,now);
+    clickGain.gain.exponentialRampToValueAtTime(.001,now+.035);
+    click.connect(clickGain).connect(master);
+    click.start(now);click.stop(now+.04);
+  }
+
+  function pick(){
+    if(first){first=false;return 0;}
+    if(used.length>=DB.length){used=[];}
+    var idx;
+    do{idx=Math.floor(Math.random()*DB.length);}while(used.indexOf(idx)!==-1);
+    return idx;
+  }
+  function setEvidence(item){
+    result.textContent=item.stamp;
+    quote.textContent=item.original;
+    meta.textContent=item.who+" · "+item.date+" · "+item.about;
+    links.textContent="";
+    item.sources.forEach(function(source){
+      var a=document.createElement("a");
+      a.className="source-link";
+      a.href=source.url;
+      a.target="_blank";
+      a.rel="noopener noreferrer";
+      a.textContent=source.label+" ↗";
+      links.appendChild(a);
+    });
+  }
+  function stamp(){
+    if(busy)return;
+    busy=true;
+    primeAudio();
+    press.disabled=true;
+    again.disabled=true;
+    var idx=pick();
+    used.push(idx);
+    var item=DB[idx];
+    bay.classList.remove("is-stamping");
+    void bay.offsetWidth;
+    mark.textContent=item.stamp.replace("Durchmarschierender","Durchmarschieren\u00adder");
+    mark.classList.toggle("is-long",item.stamp.length>38);
+    bay.classList.add("is-stamping");
+    if(soundOn){window.setTimeout(playStampSound,250);}
+    counter.textContent="Presse läuft · Stempel "+String(used.length).padStart(2,"0")+"/"+DB.length;
+    window.setTimeout(function(){
+      setEvidence(item);
+      again.hidden=false;
+      counter.textContent="Treffer · "+String(used.length).padStart(2,"0")+"/"+DB.length;
+      press.disabled=false;
+      again.disabled=false;
+      busy=false;
+    },760);
+  }
+  press.addEventListener("click",stamp);
+  again.addEventListener("click",stamp);
+  soundToggle.addEventListener("click",function(){
+    soundOn=!soundOn;
+    soundToggle.setAttribute("aria-pressed",String(soundOn));
+    soundToggle.textContent="Stempelton: "+(soundOn?"an":"aus");
+    if(soundOn){primeAudio();}
+  });
+
+})();
+</script>
+<footer class="ts-footer">
+  <div>
+    <a class="ts-brand" href="index.html">
+      <img src="assets/tagessau-logo.jpeg" alt="">
+      <strong>Tages<span>sau</span></strong>
+    </a>
+    <p>Politische Satire, fast so witzig wie Politiker. Aber gratis.</p>
+  </div>
+  <nav aria-label="Weitere Informationen">
+    <a href="ueber-tagessau.html">Über uns</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="feed.xml">Artikel-Feed (RSS)</a>
+  </nav>
+</footer><script defer src="tagessau-share.js?v=3"></script></body>
+</html>

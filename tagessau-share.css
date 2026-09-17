@@ -1,0 +1,101 @@
+.ts-share {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  color: #081238;
+  font: 700 13px/1.4 "Libre Franklin", Helvetica, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.ts-share strong {
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+.ts-share a,
+.ts-share button {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #081238;
+  border: 1px solid #cfd8e8;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(8,18,56,.07);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .18s ease, color .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.ts-share a:hover,
+.ts-share button:hover {
+  color: #fff;
+  border-color: #2f6fe4;
+  background: #2f6fe4;
+  box-shadow: 0 5px 14px rgba(8,18,56,.18);
+  transform: translateY(-2px);
+}
+
+.ts-share [data-share-channel="whatsapp"]:hover { border-color: #1fa855; background: #1fa855; }
+.ts-share [data-share-channel="x"]:hover { border-color: #111; background: #111; }
+.ts-share [data-share-channel="facebook"]:hover { border-color: #1877f2; background: #1877f2; }
+.ts-share [data-share-channel="email"]:hover { border-color: #d83288; background: #d83288; }
+.ts-share [data-share-channel="copy"]:hover { border-color: #ff55ad; background: #ff55ad; }
+
+.ts-share svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ts-share [hidden] { display: none !important; }
+
+.ts-share [role="status"] {
+  flex-basis: 100%;
+  min-height: 0;
+  color: currentColor;
+  font-size: 12px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ts-share [role="status"]:empty { display: none; }
+
+.ts-share .share-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ts-share a:focus-visible,
+.ts-share button:focus-visible {
+  outline: 3px solid #ff55ad;
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  .ts-share { gap: 7px; }
+  .ts-share strong { flex: 1 0 100%; margin: 0 0 2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-share a,
+  .ts-share button { transition: none; }
+}
