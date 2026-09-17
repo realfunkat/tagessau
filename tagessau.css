@@ -315,26 +315,34 @@ main { overflow: hidden; }
 
 .read-link span { color: var(--pink); }
 
+.hero-nav-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  padding: .45rem .7rem .4rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-bottom: 0;
+}
+
 .hero-controls {
-  position: absolute;
-  right: 0;
-  top: 1rem;
-  bottom: auto;
   display: flex;
   align-items: center;
-  z-index: 3;
-  background: #fff;
+  background: transparent;
+  border: 1px solid var(--line);
 }
 
 .hero-controls button {
-  width: 58px;
-  height: 58px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   cursor: pointer;
   color: var(--navy);
-  background: #fff;
+  background: transparent;
   border: 0;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
 }
 
 .hero-controls button:hover,
@@ -343,24 +351,20 @@ main { overflow: hidden; }
 .hero-count {
   display: flex;
   align-items: center;
-  gap: .6rem;
-  min-width: 92px;
+  justify-content: center;
+  gap: .45rem;
+  min-width: 70px;
   color: var(--navy);
-  font-size: .82rem;
+  font-size: .72rem;
   font-weight: 700;
 }
 
-.hero-count i { width: 26px; height: 2px; background: var(--pink); }
+.hero-count i { width: 16px; height: 2px; background: var(--pink); }
 
 .hero-progress {
-  position: absolute;
-  z-index: 3;
-  right: 0;
-  top: calc(1rem + 58px);
-  bottom: auto;
-  width: 208px;
-  height: 3px;
-  background: rgba(255, 255, 255, .48);
+  width: 160px;
+  height: 2px;
+  background: var(--line);
 }
 
 .hero-progress span {
@@ -370,7 +374,7 @@ main { overflow: hidden; }
   background: var(--pink);
 }
 
-.hero-progress span.is-running { animation: hero-progress 12s linear forwards; }
+.hero-progress span.is-running { animation: hero-progress 10s linear forwards; }
 
 @keyframes hero-progress { to { width: 100%; } }
 
@@ -660,8 +664,7 @@ main { overflow: hidden; }
   .lead-copy h1 { max-width: 16ch; font-size: clamp(2.55rem, 10.5vw, 4.5rem); line-height: .94; }
   .lead-copy p { margin-bottom: 1.35rem; font-family: var(--body); font-size: 1rem; line-height: 1.45; }
   .lead-deck { margin-top: 1.25rem; padding-top: .2rem; }
-  .hero-controls { right: .6rem; left: auto; top: .6rem; }
-  .hero-progress { right: .6rem; left: auto; top: calc(.6rem + 58px); }
+  .hero-nav-row { padding-right: .6rem; }
   .headline-rail { grid-template-columns: 1fr 1fr; }
   .rail-story { min-height: 125px; border-bottom: 1px solid var(--line); }
   .rail-story:nth-child(2) { border-right: 0; }

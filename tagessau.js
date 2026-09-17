@@ -61,7 +61,7 @@ function startProgress() {
   void els.progress.offsetWidth;
   if (!reduceMotion) {
     els.progress.classList.add("is-running");
-    timer = window.setTimeout(() => showStory((active + 1) % stories.length), 12000);
+    timer = window.setTimeout(() => showStory((active + 1) % stories.length), 10000);
   }
 }
 
