@@ -276,8 +276,15 @@ body.tagessau-shell .article .body {
   line-height: 1.68;
 }
 
-body.tagessau-shell .article .body p { margin: 0 0 1.25em; }
-body.tagessau-shell .article .body > p:first-child strong { color: var(--ts-navy); }
+body.tagessau-shell .article .body p {
+  margin: 0 0 1.25em;
+  color: #11172d;
+}
+
+body.tagessau-shell .article .body > p:first-child,
+body.tagessau-shell .article .body > p:first-child strong {
+  color: var(--ts-navy);
+}
 
 body.tagessau-shell .article .body a,
 body.tagessau-shell .article .redaktion a {
