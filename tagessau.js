@@ -43,6 +43,7 @@ const stories = [
 ];
 
 const els = {
+  story: document.querySelector("[data-lead-story]"),
   image: document.querySelector("[data-lead-image]"),
   video: document.querySelector("[data-lead-video]"),
   mediaLink: document.querySelector("[data-lead-link]"),
@@ -96,6 +97,7 @@ function showVideo(story) {
 function showStory(index) {
   active = (index + stories.length) % stories.length;
   const story = stories[active];
+  els.story.style.setProperty("--lead-image", `url("${mediaRoot + story.image}")`);
   els.image.src = mediaRoot + story.image;
   els.image.alt = story.alt;
   els.mediaLink.href = contentRoot + story.href;

@@ -664,10 +664,32 @@ main { overflow: hidden; }
   .lead-media::after { background: linear-gradient(0deg, rgba(3, 9, 38, .22), transparent 42%); }
   .lead-copy {
     position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: block;
     min-height: 0;
     padding: 1.35rem 1.1rem 1.6rem;
-    background: var(--navy);
+    background: transparent;
+  }
+  .lead-copy::before {
+    position: absolute;
+    z-index: -2;
+    inset: -3rem;
+    content: "";
+    background-image: var(--lead-image);
+    background-position: center 58%;
+    background-size: cover;
+    filter: blur(18px) saturate(.88);
+    transform: scale(1.09);
+  }
+  .lead-copy::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background:
+      linear-gradient(180deg, rgba(3, 9, 38, .42), rgba(3, 9, 38, .74) 58%, rgba(3, 9, 38, .92)),
+      linear-gradient(90deg, rgba(3, 9, 38, .22), rgba(3, 9, 38, .08) 58%);
   }
   .lead-copy h1 { max-width: 18ch; font-size: clamp(2.35rem, 9.7vw, 4.2rem); line-height: .96; }
   .lead-copy p { margin-bottom: 1.35rem; font-family: var(--body); font-size: 1rem; line-height: 1.45; }
