@@ -4,12 +4,22 @@ const mediaRoot = "";
 const stories = [
   {
     kicker: "EU",
+    title: "EU bestraft Volkswagen für falsches Kaufverhalten seiner Kunden",
+    summary: "Weil Käufer zu selten zu Elektroautos greifen, drohen Volkswagen hohe Strafzahlungen. Die EU stellt klar: Die Bürger dürfen frei wählen, solange sie sich richtig entscheiden.",
+    image: "images/20260918-volkswagen-strafzahlung.jpg",
+    href: "artikel/eu-bestraft-volkswagen-fuer-falsches-kaufverhalten.html",
+    alt: "Volkswagen-Autohaus mit großem VW-Logo",
+    label: "Symbolbild"
+  },
+  {
+    kicker: "EU",
     title: "EU kümmert sich rührend um unsere Kinder",
     summary: "Soziale Medien sollen für Kinder begrenzt werden. Bis dahin übernehmen öffentlich-rechtliches Fernsehen, kommunale Bibliotheken und EU-geförderte Diversity-Programme die Orientierung.",
     image: "images/20260916-eu-kinderschutz-hero.jpg",
     video: "videos/20260916-eu-kinderschutz.mp4",
     href: "artikel/eu-schuetzt-kinder-vor-falscher-beeinflussung.html",
-    alt: "KI-Satire: Ein EU-Beamter weist einen Jungen in einen Raum mit einer Drag-Vorlesestunde"
+    alt: "KI-Satire: Ein EU-Beamter weist einen Jungen in einen Raum mit einer Drag-Vorlesestunde",
+    label: "KI-Satire"
   },
   {
     kicker: "Deutschland",
@@ -18,7 +28,8 @@ const stories = [
     image: "images/20260915-spritpreise-hero.png",
     video: "videos/20260915-spritpreise.mp4",
     href: "artikel/regierung-deckelt-spritpreis-bei-sieben-euro.html",
-    alt: "KI-Satire: Eine deutsche Tankstelle zeigt wechselnde Fantasiepreise von bis zu knapp zehn Euro pro Liter"
+    alt: "KI-Satire: Eine deutsche Tankstelle zeigt wechselnde Fantasiepreise von bis zu knapp zehn Euro pro Liter",
+    label: "KI-Satire"
   },
   {
     kicker: "Deutschland",
@@ -26,15 +37,8 @@ const stories = [
     summary: "In Wilhelmshaven wird nach der Wahl geprüft, ob ein Kandidat zu Recht gar nicht erst antreten durfte.",
     image: "images/20260914-falsch-waehlen-gerade-noch-vereitelt.jpg",
     href: "artikel/falsch-waehlen-gerade-noch-vereitelt.html",
-    alt: "Wahlhelfer sortieren Stimmzettel auf einem Tisch"
-  },
-  {
-    kicker: "Deutschland",
-    title: "AfD tarnt Wahlwerbung als „FCKAFD“-Protest",
-    summary: "Als Protest getarnte Wahlwerbung: Die wirksamste Kampagne ist bekanntlich jene, für die der politische Gegner freiwillig die Plakate trägt.",
-    image: "images/20260913-afd-wahlwerbung-protest-v2.jpeg",
-    href: "artikel/afd-tarnt-wahlwerbung-als-fuck-afd-protest.html",
-    alt: "KI-Satire: Straßenszene eines als Protest inszenierten politischen Auftritts"
+    alt: "Wahlhelfer sortieren Stimmzettel auf einem Tisch",
+    label: "Dokumentarfoto"
   }
 ];
 
@@ -48,6 +52,7 @@ const els = {
   summary: document.querySelector("[data-lead-summary]"),
   current: document.querySelector("[data-hero-current]"),
   progress: document.querySelector("[data-hero-progress]"),
+  label: document.querySelector("[data-lead-label]"),
   rails: [...document.querySelectorAll("[data-slide]")]
 };
 
@@ -98,6 +103,7 @@ function showStory(index) {
   els.kicker.textContent = story.kicker;
   els.title.textContent = story.title;
   els.summary.textContent = story.summary;
+  els.label.textContent = story.label;
   els.current.textContent = String(active + 1).padStart(2, "0");
   els.rails.forEach((rail, indexValue) => rail.classList.toggle("is-active", indexValue === active));
   showVideo(story);
