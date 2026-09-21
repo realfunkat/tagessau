@@ -3,6 +3,15 @@ const mediaRoot = "";
 
 const stories = [
   {
+    kicker: "Deutschland",
+    title: "Frau verliert gegen blau, au!",
+    summary: "Die AfD wird stärkste Kraft, obwohl Manuela Schwesigs Wahlkampf sogar einen Reim enthielt.",
+    image: "images/20260921-frau-gegen-blau.jpeg",
+    href: "artikel/frau-gegen-blau-verliert-gegen-blau.html",
+    alt: "KI-Satire: Manuela Schwesig vor einem roten Wahlplakat mit der Aufschrift Die Frau gegen Blau und einem inszenierten blauen Auge",
+    label: "KI-Satire"
+  },
+  {
     kicker: "EU",
     title: "EU bestraft Volkswagen für falsches Kaufverhalten seiner Kunden",
     summary: "Weil Käufer zu selten zu Elektroautos greifen, drohen Volkswagen hohe Strafzahlungen. Die EU stellt klar: Die Bürger dürfen frei wählen, solange sie sich richtig entscheiden.",
@@ -30,15 +39,6 @@ const stories = [
     href: "artikel/regierung-deckelt-spritpreis-bei-sieben-euro.html",
     alt: "KI-Satire: Eine deutsche Tankstelle zeigt wechselnde Fantasiepreise von bis zu knapp zehn Euro pro Liter",
     label: "KI-Satire"
-  },
-  {
-    kicker: "Deutschland",
-    title: "Falsch wählen gerade noch vereitelt",
-    summary: "In Wilhelmshaven wird nach der Wahl geprüft, ob ein Kandidat zu Recht gar nicht erst antreten durfte.",
-    image: "images/20260914-falsch-waehlen-gerade-noch-vereitelt.jpg",
-    href: "artikel/falsch-waehlen-gerade-noch-vereitelt.html",
-    alt: "Wahlhelfer sortieren Stimmzettel auf einem Tisch",
-    label: "Dokumentarfoto"
   }
 ];
 
