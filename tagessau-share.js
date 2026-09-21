@@ -8,6 +8,7 @@
     whatsapp: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4.1A8 8 0 1 1 20 11.7Z" fill="none" stroke-width="1.9"/><path d="M8.2 7.8c.4 3.7 2.3 5.7 6 6.2l1.1-1.2 2 .9c-.2 1.2-1 2-2.2 2.2-4.8-.7-7.5-3.3-8.1-8.1.2-1.2 1-2 2.2-2.2l.9 2-1.9.2Z" stroke="none"/></svg>',
     x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l14 16M19 4L5 20" fill="none" stroke-width="2.2"/></svg>',
     facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.8v8h3.4Z" stroke="none"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.3 8.2H3.2V21h3.1V8.2ZM4.8 3A1.8 1.8 0 1 0 4.8 6.6 1.8 1.8 0 0 0 4.8 3ZM10 8.2H7.1V21h3.1v-6.3c0-1.7.3-3.3 2.4-3.3 2 0 2.1 1.9 2.1 3.4V21h3.1v-7c0-3.4-.7-6-4.7-6-1.9 0-3.1 1-3.6 1.9H10V8.2Z" stroke="none"/></svg>',
     email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v12H3zM3.5 7l8.5 7 8.5-7" fill="none" stroke-width="1.9"/></svg>',
     copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 14.5l5-5M7.8 16.2l-1.1 1.1a3.25 3.25 0 0 1-4.6-4.6l3-3a3.25 3.25 0 0 1 4.6 0M16.2 7.8l1.1-1.1a3.25 3.25 0 0 1 4.6 4.6l-3 3a3.25 3.25 0 0 1-4.6 0" fill="none" stroke-width="1.9"/></svg>'
   };
@@ -18,6 +19,29 @@
     element.setAttribute('title', label);
     element.innerHTML = icons[channel] + '<span class="share-visually-hidden">' + label + '</span>';
   };
+
+  const article = document.querySelector('article.article');
+  if (article && !article.querySelector('.ts-share')) {
+    const encodedUrl = encodeURIComponent(url);
+    const encodedTitle = encodeURIComponent(title);
+    const encodedMessage = encodeURIComponent(title + ' — ' + url);
+    const bar = document.createElement('div');
+    bar.className = 'ts-share article-share';
+    bar.setAttribute('aria-label', 'Artikel teilen');
+    bar.innerHTML =
+      '<strong>Teilen auf:</strong>' +
+      '<button type="button" data-native-share hidden>Teilen</button>' +
+      '<a href="https://api.whatsapp.com/send?text=' + encodedMessage + '" target="_blank" rel="noopener noreferrer">WhatsApp</a>' +
+      '<a href="https://twitter.com/intent/tweet?text=' + encodedTitle + '&url=' + encodedUrl + '" target="_blank" rel="noopener noreferrer">X</a>' +
+      '<a href="https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl + '" target="_blank" rel="noopener noreferrer">Facebook</a>' +
+      '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl + '" target="_blank" rel="noopener noreferrer">LinkedIn</a>' +
+      '<a href="mailto:?subject=' + encodedTitle + '&body=' + encodedMessage + '">E-Mail</a>' +
+      '<button type="button" data-copy-share>Link kopieren</button>' +
+      '<span role="status" data-share-status></span>';
+    const backlink = article.querySelector('.backlink');
+    if (backlink) backlink.before(bar);
+    else article.append(bar);
+  }
 
   document.querySelectorAll('.ts-share').forEach(bar => {
     const heading = bar.querySelector('strong');
@@ -42,6 +66,7 @@
       if (href.includes('whatsapp.com')) enhance(link, 'whatsapp', 'Auf WhatsApp teilen');
       else if (href.includes('twitter.com') || href.includes('x.com')) enhance(link, 'x', 'Auf X teilen');
       else if (href.includes('facebook.com')) enhance(link, 'facebook', 'Auf Facebook teilen');
+      else if (href.includes('linkedin.com')) enhance(link, 'linkedin', 'Auf LinkedIn teilen');
       else if (href.startsWith('mailto:')) enhance(link, 'email', 'Per E-Mail teilen');
     });
 

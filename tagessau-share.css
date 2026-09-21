@@ -48,6 +48,7 @@
 .ts-share [data-share-channel="whatsapp"]:hover { border-color: #1fa855; background: #1fa855; }
 .ts-share [data-share-channel="x"]:hover { border-color: #111; background: #111; }
 .ts-share [data-share-channel="facebook"]:hover { border-color: #1877f2; background: #1877f2; }
+.ts-share [data-share-channel="linkedin"]:hover { border-color: #0a66c2; background: #0a66c2; }
 .ts-share [data-share-channel="email"]:hover { border-color: #d83288; background: #d83288; }
 .ts-share [data-share-channel="copy"]:hover { border-color: #ff55ad; background: #ff55ad; }
 
@@ -88,6 +89,12 @@
 .ts-share button:focus-visible {
   outline: 3px solid #ff55ad;
   outline-offset: 3px;
+}
+
+.article-share {
+  margin: 30px 0 18px;
+  padding-top: 20px;
+  border-top: 1px solid #dce2ee;
 }
 
 @media (max-width: 520px) {
