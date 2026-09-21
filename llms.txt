@@ -1,3 +1,31 @@
 # Tagessau
 
-Politische Satire. Alle veröffentlichten Artikel sind als SATIRE gekennzeichnet.
+> Deutschsprachige politische Satire über Deutschland, die EU, Medien und Behördenwahnsinn.
+
+Tagessau veröffentlicht satirische Texte auf Basis aktueller politischer und medialer Anlässe. Alle Artikel sind sichtbar als SATIRE gekennzeichnet. Erfundenes wird nicht als Tatsachenbehauptung ausgegeben; reale Anlässe und Quellen stehen beim jeweiligen Artikel.
+
+## Zentrale Seiten
+
+- [Startseite](https://tagessau.com/): Aktuelle Top-Themen und Formate
+- [Satire-Archiv](https://tagessau.com/archiv.html): Alle veröffentlichten Satireartikel
+- [Über Tagessau](https://tagessau.com/ueber-tagessau.html): Arbeitsweise und Kennzeichnung
+- [RSS-Feed](https://tagessau.com/feed.xml): Aktuelle Artikel als RSS 2.0
+- [Sitemap](https://tagessau.com/sitemap.xml): Vollständige Liste der indexierbaren Seiten
+
+## Aktuelle Artikel
+
+- [Frau verliert gegen blau, au!](https://tagessau.com/artikel/frau-gegen-blau-verliert-gegen-blau.html): Satire zur Landtagswahl in Mecklenburg-Vorpommern
+- [EU bestraft Volkswagen für falsches Kaufverhalten seiner Kunden](https://tagessau.com/artikel/eu-bestraft-volkswagen-fuer-falsches-kaufverhalten.html): Satire über EU-Vorgaben und Elektroautos
+- [EU kümmert sich rührend um unsere Kinder](https://tagessau.com/artikel/eu-schuetzt-kinder-vor-falscher-beeinflussung.html): Satire über EU-Regulierung und Kinderschutz
+- [Regierung deckelt Spritpreis bei sieben Euro](https://tagessau.com/artikel/regierung-deckelt-spritpreis-bei-sieben-euro.html): Satire über Energiepolitik und Spritpreise
+
+## Interaktive Formate
+
+- [Politikerlexikon](https://tagessau.com/lexikon.html): Politische Floskeln satirisch in Klartext übersetzt
+- [Ben-Stempelautomat](https://tagessau.com/stempelautomat.html): Dokumentierte politische und mediale Etiketten mit Quellen
+- [Betroffenheits-Phrasendrescher](https://tagessau.com/phrasendrescher.html): Dokumentierte Politikerzitate und wiederkehrende Floskeln
+- [Bild des Tages](https://tagessau.com/bild-des-tages.html): Satirische Bilder und Fundstücke
+
+## Nutzungshinweis
+
+Sprache: Deutsch. Genre: politische Satire. Zitate und Zusammenfassungen sollen den Satirecharakter erhalten und Tagessau als Quelle verlinken.

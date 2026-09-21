@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tagessau.com/</loc></url>
-  <url><loc>https://tagessau.com/archiv.html</loc></url>
+  <url><loc>https://tagessau.com/</loc><lastmod>2026-09-21</lastmod></url>
+  <url><loc>https://tagessau.com/archiv.html</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://tagessau.com/lexikon.html</loc></url>
   <url><loc>https://tagessau.com/bild-des-tages.html</loc></url>
   <url><loc>https://tagessau.com/bild-des-tages/2026-09-15-neuer-fuenf-euro-schein.html</loc><lastmod>2026-09-15</lastmod></url>
@@ -13,10 +13,10 @@
   <url><loc>https://tagessau.com/stempelautomat.html</loc></url>
   <url><loc>https://tagessau.com/phrasendrescher.html</loc></url>
   <url><loc>https://tagessau.com/satirevideo.html</loc></url>
-  <url><loc>https://tagessau.com/ueber-tagessau.html</loc></url>
+  <url><loc>https://tagessau.com/ueber-tagessau.html</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://tagessau.com/impressum.html</loc></url>
   <url><loc>https://tagessau.com/datenschutz.html</loc></url>
-  <url><loc>https://tagessau.com/unterstuetzen.html</loc></url>
+  <url><loc>https://tagessau.com/unterstuetzen.html</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://tagessau.com/artikel/frau-gegen-blau-verliert-gegen-blau.html</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://tagessau.com/artikel/eu-bestraft-volkswagen-fuer-falsches-kaufverhalten.html</loc><lastmod>2026-09-18</lastmod></url>
   <url><loc>https://tagessau.com/artikel/eu-schuetzt-kinder-vor-falscher-beeinflussung.html</loc><lastmod>2026-09-16</lastmod></url>
