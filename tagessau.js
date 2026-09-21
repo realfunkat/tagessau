@@ -114,7 +114,6 @@ function showStory(index) {
 
 document.querySelector("[data-hero-prev]").addEventListener("click", () => showStory(active - 1));
 document.querySelector("[data-hero-next]").addEventListener("click", () => showStory(active + 1));
-els.rails.forEach((rail) => rail.addEventListener("click", () => showStory(Number(rail.dataset.slide))));
 
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".main-nav");

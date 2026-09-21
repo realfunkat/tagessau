@@ -421,6 +421,11 @@ main { overflow: hidden; }
 .rail-story.is-active::before,
 .rail-story:hover::before { width: auto; height: 6px; }
 
+.rail-story:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: -3px;
+}
+
 .rail-story.is-active { background: linear-gradient(180deg, var(--pink-soft), #fff 42%); }
 
 .rail-story span {
