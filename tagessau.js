@@ -3,6 +3,15 @@ const mediaRoot = "";
 
 const stories = [
   {
+    kicker: "Internet",
+    title: "Jetzt offiziell: Der digitale Behindertenausweis kommt",
+    summary: "Die UNO erkennt Palästina- und LGBTQ-Flagge im Profilnamen als amtlichen Nachweis besonderer Schutzbedürftigkeit an.",
+    image: "images/20260922-digitaler-behindertenausweis.jpg",
+    href: "artikel/digitaler-behindertenausweis-fuer-das-internet.html",
+    alt: "Screenshot-Montage aus zwölf stark emotional reagierenden Menschen in Social-Media-Videos",
+    label: "Montage"
+  },
+  {
     kicker: "Deutschland",
     title: "Frau verliert gegen blau, au!",
     summary: "Die AfD wird stärkste Kraft, obwohl Manuela Schwesigs Wahlkampf sogar einen Reim enthielt.",
@@ -28,16 +37,6 @@ const stories = [
     video: "videos/20260916-eu-kinderschutz.mp4",
     href: "artikel/eu-schuetzt-kinder-vor-falscher-beeinflussung.html",
     alt: "KI-Satire: Ein EU-Beamter weist einen Jungen in einen Raum mit einer Drag-Vorlesestunde",
-    label: "KI-Satire"
-  },
-  {
-    kicker: "Deutschland",
-    title: "Regierung deckelt Spritpreis bei sieben Euro",
-    summary: "Preisdeckel, Pendlerpauschale, CO₂-Aussetzung und Direktzahlungen sollen das Tanken wieder bezahlbar machen. Die Voraussetzungen stehen bereits fest.",
-    image: "images/20260915-spritpreise-hero.png",
-    video: "videos/20260915-spritpreise.mp4",
-    href: "artikel/regierung-deckelt-spritpreis-bei-sieben-euro.html",
-    alt: "KI-Satire: Eine deutsche Tankstelle zeigt wechselnde Fantasiepreise von bis zu knapp zehn Euro pro Liter",
     label: "KI-Satire"
   }
 ];
