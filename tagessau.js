@@ -5,7 +5,7 @@ const stories = [
   {
     kicker: "Internet",
     title: "Jetzt offiziell: Der digitale Behindertenausweis kommt",
-    summary: "Die UNO erkennt Palästina- und LGBTQ-Flagge im Profilnamen als amtlichen Nachweis besonderer Schutzbedürftigkeit an.",
+    summary: "Die UNO erkennt bestimmte Social Media Profilmerkmale als amtlichen Nachweis besonderer Schutzbedürftigkeit an.",
     image: "images/20260922-digitaler-behindertenausweis.jpg",
     href: "artikel/digitaler-behindertenausweis-fuer-das-internet.html",
     alt: "Screenshot-Montage aus zwölf stark emotional reagierenden Menschen in Social-Media-Videos",
